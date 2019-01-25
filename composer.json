@@ -1,0 +1,29 @@
+{
+    "name": "eduardorfreitas93/teste-star-corp",
+    "description": "Test Challenge StarCorp",
+    "authors": [
+        {
+            "name": "Eduardo Ramos",
+            "email": "eduardorfreitas93@gmail.com"
+        }
+    ],
+    "require": {
+        "php": "^7.1"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^7.5"
+    },
+    "autoload": {
+        "psr-4": {
+            "Src\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Tests\\": "tests/"
+        }
+    },
+    "scripts": {
+        "test": "phpunit tests/"
+    }
+}
