@@ -8,5 +8,5 @@ $manager = new CalculateNumber();
 $result = $manager->start();
 
 foreach ($result as $item) {
-    echo $item . PHP_EOL;
+    echo "$item[0] -> $item[1]" . PHP_EOL;
 }

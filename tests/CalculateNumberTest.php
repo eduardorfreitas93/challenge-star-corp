@@ -43,8 +43,8 @@ class CalculateNumberTest extends TestCase
     public function replaceProviderStarCorp()
     {
         return [
-            [3, StarCorp::getNameClass()],
-            [9, StarCorp::getNameClass()]
+            [3, [3, StarCorp::getNameClass()]],
+            [9, [9, StarCorp::getNameClass()]]
         ];
     }
 
@@ -60,8 +60,8 @@ class CalculateNumberTest extends TestCase
     public function replaceProviderIT()
     {
         return [
-            [5, IT::getNameClass()],
-            [10, IT::getNameClass()]
+            [5, [5, IT::getNameClass()]],
+            [10, [10, IT::getNameClass()]]
         ];
     }
 
@@ -77,8 +77,8 @@ class CalculateNumberTest extends TestCase
     public function replaceProviderStarCorpianos()
     {
         return [
-            [15, StarCorpianos::getNameClass()],
-            [30, StarCorpianos::getNameClass()]
+            [15, [15, StarCorpianos::getNameClass()]],
+            [30, [30, StarCorpianos::getNameClass()]]
         ];
     }
 
@@ -98,11 +98,11 @@ class CalculateNumberTest extends TestCase
                 1,
                 10,
                 [
-                    0 => StarCorp::getNameClass(),
-                    1 => IT::getNameClass(),
-                    2 => StarCorp::getNameClass(),
-                    3 => StarCorp::getNameClass(),
-                    4 => IT::getNameClass()
+                    0 => [3, StarCorp::getNameClass()],
+                    1 => [5, IT::getNameClass()],
+                    2 => [6, StarCorp::getNameClass()],
+                    3 => [9, StarCorp::getNameClass()],
+                    4 => [10, IT::getNameClass()]
                 ]
             ]
         ];
@@ -127,14 +127,14 @@ class CalculateNumberTest extends TestCase
                 [
                     0 => null,
                     1 => null,
-                    2 => StarCorp::getNameClass(),
+                    2 => [3, StarCorp::getNameClass()],
                     3 => null,
-                    4 => IT::getNameClass(),
-                    5 => StarCorp::getNameClass(),
+                    4 => [5, IT::getNameClass()],
+                    5 => [6, StarCorp::getNameClass()],
                     6 => null,
                     7 => null,
-                    8 => StarCorp::getNameClass(),
-                    9 => IT::getNameClass()
+                    8 => [9, StarCorp::getNameClass()],
+                    9 => [10, IT::getNameClass()]
                 ]
             ]
         ];

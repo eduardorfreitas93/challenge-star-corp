@@ -69,13 +69,13 @@ class CalculateNumber
 
     /**
      * @param int $val
-     * @return string|null
+     * @return array|null
      */
-    public function verifyCalculate(int $val): ?string
+    public function verifyCalculate(int $val): ?array
     {
         foreach ($this->dividerModel->getDividers() as $divider) {
             if ($divider->calculate($val)) {
-                return $divider->getNameClass();
+                return [$val, $divider->getNameClass()];
             }
         }
 
